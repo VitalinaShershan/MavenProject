@@ -3,7 +3,8 @@ package com.hrms.stepdefenitions;
 import com.hrms.utils.CommonMethods;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
-import org.testng.Assert;
+import org.junit.Assert;
+
 
 import java.util.List;
 
@@ -17,6 +18,6 @@ public class DashboardStepDefenition extends CommonMethods {
         System.out.println(expectedDashTabs);
         System.out.println(actualDashTabs);
 
-        Assert.assertEquals(actualDashTabs, expectedDashTabs,"Verifying dashboard tabs");
+        Assert.assertEquals("Verifying dashboard tabs", actualDashTabs, expectedDashTabs);
     }
 }
